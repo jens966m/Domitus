@@ -26,6 +26,7 @@ namespace Domitus
 
             actions.OpenTray();
             actions.Screenshot();
+            actions.RandomMouseJump();
             
             //Skriv hvor lang tid det har taget at køre koden
             watch.Stop();
