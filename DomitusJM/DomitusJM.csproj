@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screenshot\Screenshot.cs" />
+    <Compile Include="Actions\Screenshot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
