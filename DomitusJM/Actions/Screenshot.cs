@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace Domitus
+namespace DomitusJM.Actions
 {
     public static class Screenshot
     {

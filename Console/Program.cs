@@ -24,6 +24,7 @@ namespace Domitus
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
+            actions.OpenTray();
             actions.Screenshot();
             
             //Skriv hvor lang tid det har taget at køre koden

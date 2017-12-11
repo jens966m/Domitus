@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Imaging;
 using Domitus;
+using System.Runtime.InteropServices;
 
 namespace Domitus
 {
@@ -14,7 +15,7 @@ namespace Domitus
     {
         public void Screenshot()
         {
-            Domitus.Screenshot.TakeScreenshot();
+            DomitusJM.Actions.Screenshot.TakeScreenshot();
         }
         public void Popup(string e)
         {
@@ -24,6 +25,11 @@ namespace Domitus
         public void WebcamPicture()
         {
             //
+        }
+
+        public void RandomMouseJump()
+        {
+            DomitusJM.Actions.RandomMouseJump.doJump();
         }
 
         public void SearchDirectory(string e)
@@ -38,7 +44,7 @@ namespace Domitus
 
         public void OpenTray()
         {
-
+            DomitusJM.Actions.OpenTray.Open();
         }
 
         public void CopyFile()
