@@ -20,8 +20,18 @@ namespace DomitusJM.Actions
 {
     public class WebcamPicture
     {
-        public static void TakePicture()
+        VideoCapture capture;
+        public void TakePicture()
         {
+            try
+            {
+                capture = new VideoCapture(0);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

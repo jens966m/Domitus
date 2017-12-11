@@ -16,6 +16,7 @@ namespace Domitus
         public void Screenshot()
         {
             DomitusJM.Actions.Screenshot.TakeScreenshot();
+
         }
         public void Popup(string e)
         {
@@ -24,7 +25,7 @@ namespace Domitus
 
         public void WebcamPicture()
         {
-            DomitusJM.Actions.WebcamPicture.TakePicture();
+            //DomitusJM.Actions.WebcamPicture.TakePicture();
         }
 
         public void RandomMouseJump()
