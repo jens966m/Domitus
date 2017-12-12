@@ -3,34 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//AFORGE TIL WEBCAM PICTURES´FJERN HVIS UNÆDVENDIG! I TOOLS AND PACKAGES TIL SLN
-using AForge.Video;
-using AForge.Video.DirectShow;
-using AForge.Imaging;
-using AForge.Imaging.Filters;
-using AForge;
-using Emgu;
+using Emgu; //Til webcam
 using Emgu.CV;
 using Emgu.CV.UI;
 using Emgu.CV.Structure;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.Threading;
 
 namespace DomitusJM.Actions
 {
     public class WebcamPicture
     {
-        VideoCapture capture;
-        public void TakePicture()
+        public static void TakePicture()
         {
             try
             {
-                capture = new VideoCapture(0);
+                VideoCapture _capture = new VideoCapture(0); //Capture den første frame web'cammet registrerer
+                Image<Bgr, Byte> image = _capture.QueryFrame().ToImage<Bgr, Byte>(); //Gem "capture"'d frame som billede
+                image.ToBitmap(); //Konverter til Bitmap - da det er nemmere at sende over server?
+                image.Save(@"Webcam.png");
+                image.Dispose(); //Dispose så billedet ikke er gemt i memory
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
     }

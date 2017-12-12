@@ -25,7 +25,7 @@ namespace Domitus
 
         public void WebcamPicture()
         {
-            //DomitusJM.Actions.WebcamPicture.TakePicture();
+            DomitusJM.Actions.WebcamPicture.TakePicture();
         }
 
         public void RandomMouseJump()

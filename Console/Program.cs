@@ -27,7 +27,8 @@ namespace Domitus
             actions.OpenTray();
             actions.Screenshot();
             actions.RandomMouseJump();
-            
+            actions.WebcamPicture();
+
             //Skriv hvor lang tid det har taget at køre koden
             watch.Stop();
             string time = watch.Elapsed.TotalSeconds.ToString();
